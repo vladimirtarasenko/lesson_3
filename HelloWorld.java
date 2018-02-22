@@ -1,28 +1,24 @@
 public class HelloWorld {
 	public static void main (String[] Args) {
 	
-int arr[]= {12, 55, 7, 11, 9, 43, 14, 8, 32, 15};
+int arr[]= {12, 55, 7, 12, 9, 8, 14, 8, 32, 12};
 int i;
-int minvalue=arr [0];
-int maxvalue=arr[0];
-int imin = 0;
-int imax=0;
-for(i=0;i<10;i++) {
-	if(arr[i]<minvalue) {
-		minvalue=arr[i];
-		imin=i;
+int counts=1;
+int digit=0;
+int j;
+for(i=0;i<9;i++) {
+	if(arr[i]!=digit) {
+	for(j=i+1;j<10;j++) {
+		if(arr[i]==arr[j]) {
+		counts++;
+		digit=arr[i];	
+				}		
 			}
-	if(arr[i]>maxvalue){
-		maxvalue=arr[i];
-		imax=i;
+	if(counts!=1) {
+		System.out.println("["+digit+"]"+"встречается" +counts+ " раз");
 	}
-}
-	arr[imin]=0;
-	arr[imax]=99;
-
-for(i=0;i<10;i++) {
-	System.out.print(arr[i]+" ");
-    	
+	}	
+	counts=1;	  	
 }
 }
 }
