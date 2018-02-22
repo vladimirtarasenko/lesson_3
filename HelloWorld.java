@@ -1,23 +1,19 @@
+import java.util.Arrays;
+
 public class HelloWorld {
 	public static void main (String[] Args) {
-	
-int digit=123452;
-String digit1=Integer.toString(digit);
-int count=0;
+int[] arr=new int [20];
 int i;
-char[] arr=digit1.toCharArray();
-for(i=0;i<arr.length-1;i++) {
-if(arr[i+1]>arr[i]) {
-	count++;
+for(i=0;i<20;i++) {
+	arr[i]=(int)(Math.random()*100);
+	System.out.print(arr[i]+" ");
 }
-}
-if(count==arr.length-1) {
-	System.out.println("Цифры образуют возрастающую последовательность");
-}
-else {
-	System.out.println("Цифры не образуют возрастающую последовательность");
+	Arrays.sort(arr);	
+	System.out.println();
+	for(i=0;i<20;i++) {
+		System.out.print(arr[i]+" ");
 	}
-}		
+	}		
 }
 
 
