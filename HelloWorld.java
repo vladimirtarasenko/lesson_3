@@ -1,24 +1,23 @@
 public class HelloWorld {
 	public static void main (String[] Args) {
 	
-int arr[]= {14, 55, 7, 12, 9, 8, 14, 10, 32, 12};
+int digit=123452;
+String digit1=Integer.toString(digit);
+int count=0;
 int i;
-int temp;
-int arrmiddle=arr.length/2;
-int arrlength=arr.length-1;
-for(i=0;i<10;i++) {
-	System.out.print(arr[i]+" ");
+char[] arr=digit1.toCharArray();
+for(i=0;i<arr.length-1;i++) {
+if(arr[i+1]>arr[i]) {
+	count++;
 }
-for(i=0;i<arrmiddle;i++) {
-	temp=arr[i];
-	arr[i]=arr[arrlength-i];
-	arr[arrlength-i]=temp;
 }
-System.out.println();
-for(i=0;i<10;i++) {
-	System.out.print(arr[i]+" ");
+if(count==arr.length-1) {
+	System.out.println("Цифры образуют возрастающую последовательность");
+}
+else {
+	System.out.println("Цифры не образуют возрастающую последовательность");
+	}
 }		
-}
 }
 
 
