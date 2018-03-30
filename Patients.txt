@@ -1,0 +1,3 @@
+Ivan;Petrov;15.05.1969;true
+Petr;Ivanov;11.03.1975;false
+Sergei;Sergeev;18.01.1981;true
